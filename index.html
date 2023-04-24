@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/script.js" defer></script>
+  <script type="module" src="js/player.js" defer></script>
+  <script src="js/quote.js" defer></script>
+  <script src="js/settings.js" defer></script>
+  <script src="js/todo.js" defer></script>
+  <script src="js/theme.js" defer></script>
+  <title>momentum | момент</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player" data-comp="player">
+      <div class="audio-name">
+        <span class="audio-name-text">Aqua Caelestis</span>
+      </div>
+      <div class="progress-wrapper">
+        <div class="audio-time">
+          <span class="current">0:00</span>
+          <span class="slash"> / </span>
+          <span class="length">0:00</span>
+        </div>
+        <input type="range" class="timeline player-range" value="0" min="0" max="100"></input>
+      </div>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="volume-wrapper">
+        <button class="volume-button player-icon"></button>
+        <input type="range" name="volume" class="volume-slider player-range" min="0" max="1" step="0.05" value="1">
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="header-top">
+      <div class="todo" data-comp="todo">
+        <button class="todo-button">TO<br>DO</button>
+        <div class="todo-block">  
+          <div class="container">
+            <div class="form">
+              <input type="text" class="input" />
+              <input type="submit" class="add" value="Add Task" />
+            </div>
+            <div class="tasks"></div>
+            <div class="delete-all">Delete all</div>
+          </div>
+        </div>
+      </div>
+      <section class="settings">
+        <button class="setting-button"></button>
+        <div class="setting-block">
+          <div class="settings-top">
+            <div class="translate">
+              <button class="ru-btn translate-btn">ru</button>
+              <button class="en-btn translate-btn">en</button>
+            </div>
+            <div class="theme">
+              <div id="toggle-theme-btn">
+                <img src="./assets/svg/sun.png" alt="sun" id="toggle-theme-image">
+              </div>
+            </div>
+          </div>
+          <div class="components">
+            <p class="components-title">Show / hide</p>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="time" checked>
+              <span>Time</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="date" checked>
+              <span>Date</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="greeting" checked>
+              <span>Greeting</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="quote" checked>
+              <span>Quote</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="weather" checked>
+              <span>Weather</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="player" checked>
+              <span>Player</span>
+            </label>
+            <label class="components-label">
+              <input class="components-input" type="checkbox" value="todo" checked>
+              <span>TODO</span>
+            </label>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div class="weather" data-comp="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time" data-comp="time"></time>
+    <data class="date" data-comp="date"></data>
+    <div class="greeting-container" data-comp="greeting">
+      <span class="greeting"></span>
+      <input placeholder="Enter name" type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="quote-block" data-comp="quote">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <section class="footer-bottom">
+      <div class="githab">
+        <a href="https://github.com/Sardn" target="_blank" class="git-link"><p>My githab</p></a>
+        <div class="year">2023</div>
+        <a href="https://rs.school/js/" target="_blank" class="rs-link"><img src="https://rs.school/images/rs_school_js.svg"
+            alt="logo RS" width="50"></a>
+
+      </div>
+    </section>
+  </footer>
+
+</body>
+
+</html>
